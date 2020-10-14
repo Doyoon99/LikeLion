@@ -1,0 +1,15 @@
+{% extends 'crudapp/base.html' %}
+{% block content %}
+
+<h1>crudapp/new.html</h1>
+
+<form method='POST'>
+    {% csrf_token %}
+    <table>
+        {{form.as_table}}
+    </table>
+    <br>
+    <input type = 'submit' value='등록'>
+</form>
+
+{% endblock %}
